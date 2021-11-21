@@ -1,0 +1,11 @@
+.root {
+	-fx-background-color: lightgray;
+}
+
+.label {
+	-fx-font-size: 18;
+}
+
+.textfield {
+	-fx-font-size: 18;	
+}

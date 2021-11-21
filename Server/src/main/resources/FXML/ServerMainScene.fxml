@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox fx:id="root" alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="700.0" style="-fx-background-color: lightgray;" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ServerMainController">
+   <children>
+      <HBox alignment="CENTER" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="100.0" prefWidth="200.0" spacing="20.0">
+         <children>
+            <Label text="Number of clients connected:" />
+            <TextField fx:id="noOfClientsText" alignment="CENTER" editable="false" prefHeight="26.0" prefWidth="40.0">
+            </TextField>
+         </children>
+      </HBox>
+      <VBox alignment="TOP_CENTER" prefHeight="593.0" prefWidth="700.0" spacing="80.0">
+         <children>
+            <ListView fx:id="serverList" prefHeight="450.0" prefWidth="700.0" />
+            <Button fx:id="offButton" mnemonicParsing="false" onAction="#offButtonMethod" text="Turn Off Server" />
+         </children>
+      </VBox>
+   </children>
+</VBox>
