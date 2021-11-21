@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox fx:id="root" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="750.0" prefWidth="700.0" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ClientMainController">
+   <children>
+      <VBox alignment="BOTTOM_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="100.0" prefWidth="700.0">
+         <children>
+            <Label text="Choose who to bet on and enter amount to bet" />
+            <HBox alignment="TOP_CENTER" prefHeight="40.0" prefWidth="200.0" spacing="30.0">
+               <children>
+                  <ChoiceBox fx:id="betChoice" prefWidth="150.0" />
+                  <TextField fx:id="betAmountText" prefWidth="300.0" promptText="Enter amount to bet (e.g. enter 1000 to bet $1000)" />
+               </children>
+            </HBox>
+            <Button fx:id="playButton" mnemonicParsing="false" onAction="#playButtonMethod" prefHeight="25.0" prefWidth="83.0" text="Play" />
+         </children>
+      </VBox>
+      <HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="700.0" spacing="40.0">
+         <children>
+            <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="5.0">
+               <children>
+                  <Label text="Player's Hand" />
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+                     <children>
+                        <ImageView fx:id="playerCard1" fitHeight="145.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true" />
+                        <ImageView fx:id="playerCard2" fitHeight="145.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true" />
+                        <ImageView fx:id="playerCard3" fitHeight="145.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="5.0">
+                     <children>
+                        <Label text="Player's Total:" />
+                        <Label fx:id="playerTotal" />
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+            <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="5.0">
+               <children>
+                  <Label text="Banker's Hand" />
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+                     <children>
+                        <ImageView fx:id="bankerCard1" fitHeight="145.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true" />
+                        <ImageView fx:id="bankerCard2" fitHeight="145.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true" />
+                        <ImageView fx:id="bankerCard3" fitHeight="145.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="5.0">
+                     <children>
+                        <Label text="Banker's Total:" />
+                        <Label fx:id="bankerTotal" />
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+      <VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="350.0" prefWidth="700.0">
+         <children>
+            <ListView fx:id="clientList" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="500.0" />
+            <HBox alignment="CENTER" prefHeight="90.0" prefWidth="200.0" spacing="20.0">
+               <children>
+                  <Label text="Current Winnings:" />
+                  <TextField fx:id="currentWinningsText" editable="false" />
+               </children>
+            </HBox>
+            <Button fx:id="exitButton" mnemonicParsing="false" onAction="#exitButtonMethod" prefHeight="26.0" prefWidth="100.0" text="Exit" />
+         </children>
+      </VBox>
+   </children>
+</VBox>

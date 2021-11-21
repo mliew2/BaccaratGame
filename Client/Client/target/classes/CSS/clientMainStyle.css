@@ -1,0 +1,13 @@
+.root {
+	-fx-background-color: darkgreen;
+}
+
+.choice-box .label {
+	-fx-text-fill: black;
+	-fx-font-size: 12;
+}
+
+.label {
+	-fx-text-fill: white;
+	-fx-font-size: 18;
+}
